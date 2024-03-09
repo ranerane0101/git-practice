@@ -1,4 +1,5 @@
 class Api::UsersController < ApplicationController
+  # アクションメソッドが飛ばれる前に実行される
   before_action :authenticate, only: %i[update]
 
   def create
