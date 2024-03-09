@@ -13,6 +13,7 @@ class Api::UsersController < ApplicationController
 
   # 認証がないと実行できないメソッド
   def update
+    # メソッドを引数に渡している
     if @current_user.update(user_params)
       render json: { user: { name: @current_user.name, user_type: @current_user.user_type } }
     else
